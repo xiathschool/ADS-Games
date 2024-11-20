@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Xsta7UZmWtU=",
+  "dgSpecHash": "F87Qf+eucD0=",
   "success": true,
   "projectFilePath": "/Users/sky/Github/ADS-Games/ADS-Games/ADS-Games/ADS-Games.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/sky/.nuget/packages/netcord/1.0.0-alpha.330/netcord.1.0.0-alpha.330.nupkg.sha512"
+  ],
   "logs": []
 }
