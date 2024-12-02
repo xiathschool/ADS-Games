@@ -43,9 +43,13 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "NetCord": {
+            "Microsoft.Extensions.Hosting": {
               "target": "Package",
-              "version": "[1.0.0-alpha.330, )"
+              "version": "[9.0.0, )"
+            },
+            "NetCord.Hosting": {
+              "target": "Package",
+              "version": "[1.0.0-alpha.333, )"
             }
           },
           "imports": [
