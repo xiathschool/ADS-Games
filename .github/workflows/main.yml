@@ -38,3 +38,6 @@ jobs:
         with:
           name: compiled-dlls
           path: GameArtifacts/** # Upload all DLLs in the GameArtifacts directory
+      - name: Debug repository structure
+        run: ls -R
+    
