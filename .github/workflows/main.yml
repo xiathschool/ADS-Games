@@ -1,0 +1,37 @@
+name: Compile Game Files
+
+on:
+  pull_request:
+    paths:
+      - "Games/**" # Trigger only if changes are made in the games directory
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up .NET
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0
+
+      # Step 3: Restore dependencies and build each game
+      - name: Build game DLLs
+        run: |
+          mkdir -p GameArtifacts # Create the directory if it doesn't exist
+          for project in $(find Games -name '*.csproj'); do
+            game_name=$(basename $(dirname $project)) # Extract game folder name
+            dotnet build $project --configuration Release --output ./GameArtifacts/$game_name;
+          done
+
+      # Step 4: Upload compiled DLLs as artifacts
+      - name: Upload DLLs as GitHub artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: compiled-dlls
+          path: GameArtifacts/** # Upload all DLLs in the GameArtifacts directory
