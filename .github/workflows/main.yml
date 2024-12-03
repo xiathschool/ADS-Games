@@ -24,7 +24,7 @@ jobs:
       - name: Build game DLLs
         run: |
           mkdir -p ./ADS-Games/GameArtifacts # Create the directory if it doesn't exist
-          for project in $(find ./ADS-Games/Games -type f -name '*.csproj'); do
+          for project in $(find ./Games -type f -name '*.csproj'); do
             # Extract the name of the game project folder (e.g., "TestGame")
             game_name=$(basename $(dirname $project))
   
