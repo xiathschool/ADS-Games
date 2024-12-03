@@ -29,7 +29,7 @@ jobs:
             game_name=$(basename $(dirname $project))
   
             # Build the project and output to ./ADS-Games/GameArtifacts/<game_name>
-            dotnet build "$project" --configuration Release --output "./ADS-Games/GameArtifacts/$game_name";
+            dotnet build "$project" --configuration Release --output "./GameArtifacts/$game_name";
           done
 
       # Step 4: Upload compiled DLLs as artifacts
