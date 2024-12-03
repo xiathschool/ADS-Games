@@ -24,10 +24,10 @@ jobs:
       - name: Build game DLLs
         run: |
           mkdir -p ./ADS-Games/GameArtifacts # Create the directory if it doesn't exist
-          for project in $(find Games -type f -name '*.csproj'); do
-            # Extract the name of the game project folder (e.g., "TestGames")
+          for project in $(find ./ADS-Games/Games -type f -name '*.csproj'); do
+            # Extract the name of the game project folder (e.g., "TestGame")
             game_name=$(basename $(dirname $project))
-    
+  
             # Build the project and output to ./ADS-Games/GameArtifacts/<game_name>
             dotnet build "$project" --configuration Release --output "./ADS-Games/GameArtifacts/$game_name";
           done
