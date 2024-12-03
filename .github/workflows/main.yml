@@ -1,9 +1,9 @@
 name: Compile Game Files
 
 on:
-  pull_request:
-    paths:
-      - "Games/**" # Trigger only if changes are made in the games directory
+  push:
+    branches:
+      - main # Trigger on any push to the main branch
       
 jobs:
   build:
