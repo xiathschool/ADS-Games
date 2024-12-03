@@ -4,7 +4,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot", "Bot\Bot.csproj", "{1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLibrary", "GameLibrary\GameLibrary.csproj", "{FAE39F5C-0FF3-4AE3-B4CA-6FB16919A148}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Games", "Games\Games.csproj", "{606A52E1-F297-4DAC-8C29-6FAAE156094C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{43DBFE99-C8A9-4F42-B2DE-E1D9930E539C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGame", "TestGame\TestGame.csproj", "{705BFFF0-B66E-465B-8564-5D01ACAB8E01}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,9 +22,12 @@ Global
 		{FAE39F5C-0FF3-4AE3-B4CA-6FB16919A148}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAE39F5C-0FF3-4AE3-B4CA-6FB16919A148}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAE39F5C-0FF3-4AE3-B4CA-6FB16919A148}.Release|Any CPU.Build.0 = Release|Any CPU
-		{606A52E1-F297-4DAC-8C29-6FAAE156094C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{606A52E1-F297-4DAC-8C29-6FAAE156094C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{606A52E1-F297-4DAC-8C29-6FAAE156094C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{606A52E1-F297-4DAC-8C29-6FAAE156094C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{705BFFF0-B66E-465B-8564-5D01ACAB8E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{705BFFF0-B66E-465B-8564-5D01ACAB8E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705BFFF0-B66E-465B-8564-5D01ACAB8E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{705BFFF0-B66E-465B-8564-5D01ACAB8E01}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{705BFFF0-B66E-465B-8564-5D01ACAB8E01} = {43DBFE99-C8A9-4F42-B2DE-E1D9930E539C}
 	EndGlobalSection
 EndGlobal
