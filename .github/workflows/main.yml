@@ -45,3 +45,10 @@ jobs:
       - name: Debug repository structure
         run: ls -R
     
+      - name: Commit and push DLLs
+        run: |
+          git config --global user.name "xiathschool"
+          git config --global user.email "xiathschool@gmail.com"
+          git add ./ADS-Games/GameArtifacts/*
+          git commit -m "Add compiled DLLs"
+          git push
