@@ -23,8 +23,10 @@ jobs:
       # Step 3: Restore dependencies and build each game
       - name: Build game DLLs
         run: |
-          mkdir -p /ADS-Games/GameArtifacts # Create the directory if it doesn't exist
+          mkdir -p ./ADS-Games/GameArtifacts # Create the directory if it doesn't exist
           ls
+          ls ./
+          ls ./ADS-Games/
           for project in $(find ADS-Games/Games -mindepth 2 -maxdepth 2 -type f -name '*.csproj'); do
             # Extract the name of the project folder (immediate parent directory)
             game_name=$(basename "$(dirname "$project")")
