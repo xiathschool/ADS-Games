@@ -25,7 +25,7 @@ jobs:
         run: |
           mkdir -p ./ADS-Games/GameArtifacts # Create the directory if it doesn't exist
           ls ./ADS-Games/
-          for project in $(find ./ADS-Games/Games -mindepth 2 -maxdepth 2 -type f -name '*.csproj'); do
+          for project in $(find ./ADS-Games -type f -name '*.csproj' ! -name 'Bot.csproj' ! -name 'GameLibrary.csproj'); do
             # Extract the name of the project folder (immediate parent directory)
             game_name=$(basename "$(dirname "$project")")
             
