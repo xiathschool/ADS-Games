@@ -23,16 +23,16 @@ jobs:
       # Step 3: Restore dependencies and build each game
       - name: Build game DLLs
         run: |
-          mkdir -p ./ADS-Games/GameArtifacts # Create the directory if it doesn't exist
+          mkdir -p /ADS-Games/GameArtifacts # Create the directory if it doesn't exist
           ls
-          for project in $(find ../ADS-Games/Games -mindepth 2 -maxdepth 2 -type f -name '*.csproj'); do
+          for project in $(find ADS-Games/Games -mindepth 2 -maxdepth 2 -type f -name '*.csproj'); do
             # Extract the name of the project folder (immediate parent directory)
             game_name=$(basename "$(dirname "$project")")
             
             echo "Building project: $project into GameArtifacts/$game_name"
             
-            # Build the project and output to ./ADS-Games/GameArtifacts/<game_name>
-            dotnet build "$project" --configuration Release --output "../GameArtifacts/$game_name"
+            # Build the project and output to ADS-Games/GameArtifacts/<game_name>
+            dotnet build "$project" --configuration Release --output "GameArtifacts/$game_name"
           done
 
       # Step 4: Upload compiled DLLs as artifacts
