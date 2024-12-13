@@ -1,8 +1,8 @@
 ﻿using GameLibrary;
 
-namespace TestGame;
+namespace TestGame1;
 
-public class TestGame : IGame
+public class TestGame1 : IGame
 {
     private int _turns;
     private string _output;
