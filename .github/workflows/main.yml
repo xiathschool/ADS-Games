@@ -30,6 +30,7 @@ jobs:
             game_name=$(basename "$(dirname "$project")")
             
             echo "Building project: $project into GameArtifacts/$game_name"
+            echo "$game_name"
             
             # Build the project and output to ADS-Games/GameArtifacts/<game_name>
             dotnet build "$project" --configuration Release --output "./ADS-Games/GameArtifacts/$game_name"
